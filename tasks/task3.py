@@ -7,7 +7,6 @@ def solve():
     # Запрос веса и роста
     weight = float(input("Введите вес (в кг): "))
     height = float(input("Введите рост (в метрах): "))
-
     # Вычисление ИМТ
     bmi = weight / (height ** 2)
     print(f"Индекс массы тела (ИМТ): {bmi:.2f}")
