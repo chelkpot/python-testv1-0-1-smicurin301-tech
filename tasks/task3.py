@@ -4,12 +4,11 @@
 
 def solve():
 # Ниже пишите решение задачии(Обязательно поставьте четыре пробела после функции Solve())
-    # Запрос веса и роста
-    weight = float(input())
-    height = float(input())
-    bmi = weight / (height ** 2)
-    print(f"Индекс массы тела (ИМТ): {bmi}")  # Без :.2f
-   
+    # Задание 3. Индекс массы тела (BMI)
+    weight = float(input("Введите вес (в кг): "))
+    height = float(input("Введите рост (в метрах): "))
+    BMI = weight / (height ** 2)
+    print("Индекс массы тела (BMI):", BMI)
 
 # Код ниже не трогать! он нужен для тестов
 if __name__ == "__main__":
