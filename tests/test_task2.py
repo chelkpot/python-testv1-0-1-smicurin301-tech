@@ -1,5 +1,17 @@
-# Задание 2. Площадь треугольника
-a = float(input("Введите основание a: "))
-h = float(input("Введите высоту h: "))
-S = 0.5 * a * h
-print(f"Площадь треугольника: {S}")
+# tests/test_task2.py
+
+import pytest
+from unittest.mock import patch
+from io import StringIO
+from tasks.task2 import solve  # Теперь импортируем solve() напрямую
+
+def test_task2_triangle_area(capsys):
+    with patch('builtins.input', side_effect=['10', '5']):
+        solve()
+        captured = capsys.readouterr()
+        assert "25.0" in captured.out
+        # Задание 2. Площадь треугольника
+    a = float(input("Введите основание a: "))
+    h = float(input("Введите высоту h: "))
+    S = 0.5 * a * h
+    print(f"Площадь треугольника: {S}")
